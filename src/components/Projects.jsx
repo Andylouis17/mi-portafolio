@@ -104,8 +104,8 @@ function Projects() {
             </div>
 
             <p>
-              Espacio reservado para incorporar
-              otro proyecto real de desarrollo web.
+              Próximamente, nuevos proyectos de desarrollo web donde aplicaré mis conocimientos en JavaScript, 
+              React y otras tecnologías.
             </p>
 
             <div className="projectLinks">

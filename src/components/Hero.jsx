@@ -6,7 +6,7 @@ import {
   FaReact,
   FaNodeJs,
   FaGitAlt,
-  FaMouse,
+  
 } from "react-icons/fa";
 
 import {
@@ -147,7 +147,6 @@ function Hero() {
         href="#sobre-mi"
         className="heroScroll"
       >
-       
        
       </a>
 
