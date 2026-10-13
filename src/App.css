@@ -1,0 +1,2816 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.app {
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      #0d2947 0%,
+      transparent 32%
+    ),
+    #06111f;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: calc(100% - 60px);
+  max-width: 1400px;
+  height: 75px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #17304b;
+}
+
+.logo {
+  color: #3b82f6;
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.navLinks a {
+  color: #d8e2ed;
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+.navLinks a:hover {
+  color: #3b82f6;
+}
+
+.themeButton {
+  width: 44px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #536b84;
+  border-radius: 20px;
+
+  background: transparent;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.themeButton:hover {
+  transform: scale(1.08);
+
+  background: #102b48;
+}
+
+.themeButton svg {
+  font-size: 15px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  width: calc(100% - 60px);
+  max-width: 1400px;
+
+  min-height: calc(100vh - 75px);
+
+  margin: 0 auto;
+
+  /* El diseño final del Hero se define más adelante. */
+}
+
+.heroHello {
+  margin-bottom: 5px;
+
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin-bottom: 18px;
+
+  font-size: clamp(50px, 6vw, 82px);
+  line-height: 1;
+
+  color: #ffffff;
+}
+
+.hero h1 span {
+  color: #4385ff;
+}
+
+.hero h2 {
+  margin-bottom: 22px;
+
+  color: #f1f5f9;
+
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.heroDescription {
+  max-width: 600px;
+
+  margin-bottom: 32px;
+
+  color: #aebed0;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 24px;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.primaryButton {
+  background: #1683ff;
+  color: white;
+}
+
+.primaryButton:hover {
+  background: #3595ff;
+
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  border: 1px solid #647c95;
+
+  color: white;
+}
+
+.secondaryButton:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   IMAGEN PRINCIPAL
+========================= */
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  max-width: 600px;
+  height: 410px;
+
+  border: 1px solid #18395b;
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071522,
+      #0b2948
+    );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 25px 80px
+    rgba(0, 0, 0, 0.35);
+}
+
+.imagePlaceholder span {
+  color: #4385ff;
+
+  font-size: 85px;
+  font-weight: 700;
+}
+
+.imagePlaceholder p {
+  margin-top: 15px;
+
+  color: #9eb1c5;
+
+  font-size: 18px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .navLinks {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    padding-top: 50px;
+    padding-bottom: 60px;
+
+    text-align: center;
+  }
+
+  .heroDescription {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .heroImage {
+    order: -1;
+  }
+
+  .imagePlaceholder {
+    height: 300px;
+  }
+}
+
+/* =========================
+   TELÃ‰FONO
+========================= */
+
+@media (max-width: 600px) {
+  .navbar,
+  .hero {
+    width: calc(100% - 30px);
+  }
+
+  .hero {
+    gap: 35px;
+  }
+
+  .heroHello {
+    font-size: 21px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .heroDescription {
+    font-size: 15px;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .imagePlaceholder {
+    height: 240px;
+  }
+}
+
+/* =========================
+   SOBRE MÍ
+========================= */
+
+.about {
+  width: calc(100% - 60px);
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 100px 0;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  align-items: center;
+  gap: 80px;
+
+  border-top: 1px solid #17304b;
+}
+
+.sectionLabel {
+  margin-bottom: 12px;
+
+  color: #4385ff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.aboutContent > h2 {
+  margin-bottom: 28px;
+
+  color: #ffffff;
+
+  font-size: clamp(38px, 4vw, 58px);
+}
+
+.aboutContent > p:not(.sectionLabel) {
+  max-width: 720px;
+
+  margin-bottom: 18px;
+
+  color: #aebed0;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Tarjetas */
+
+.aboutCards {
+  margin-top: 45px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.aboutCards article {
+  min-height: 145px;
+
+  padding: 22px;
+
+  display: flex;
+  gap: 15px;
+
+  border: 1px solid #18395b;
+  border-radius: 12px;
+
+  background: rgba(8, 28, 48, 0.65);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.aboutCards article:hover {
+  transform: translateY(-5px);
+
+  border-color: #4385ff;
+}
+
+.aboutIcon {
+  flex-shrink: 0;
+
+  color: #4385ff;
+
+  font-size: 28px;
+}
+.aboutCards h3 {
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+.aboutCards article p {
+  color: #9fb2c6;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Responsive Sobre mí */
+
+@media (max-width: 1000px) {
+  .about {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  
+}
+
+@media (max-width: 700px) {
+  .about {
+    width: calc(100% - 30px);
+
+    padding: 70px 0;
+  }
+
+  .aboutCards {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutContent > h2 {
+    font-size: 36px;
+  }
+
+}
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.projects {
+  width: calc(100% - 60px);
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 100px 0;
+
+  border-top: 1px solid #17304b;
+}
+
+.sectionHeader {
+  max-width: 750px;
+
+  margin-bottom: 50px;
+}
+
+.sectionHeader h2 {
+  margin-bottom: 15px;
+
+  color: #ffffff;
+
+  font-size: clamp(38px, 4vw, 58px);
+}
+
+.sectionHeader > p:not(.sectionLabel) {
+  color: #aebed0;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* GRID */
+
+.projectsGrid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 25px;
+}
+
+/* TARJETA */
+
+.projectCard {
+  width: 100%;
+  overflow: hidden;
+
+  border: 1px solid #18395b;
+  border-radius: 14px;
+
+  background: rgba(7, 25, 43, 0.8);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-6px);
+
+  border-color: #4385ff;
+}
+
+/* PetMeet ocupa más espacio */
+
+.featuredProject {
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+
+/* IMAGEN */
+
+.projectImage {
+  min-height: 270px;
+
+  background: #091b2d;
+}
+
+.projectPlaceholder {
+  width: 100%;
+  height: 100%;
+  min-height: 270px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(67, 133, 255, 0.25),
+      transparent 50%
+    ),
+    #081828;
+
+  color: #4385ff;
+
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/* CONTENIDO */
+
+.projectContent {
+  padding: 30px;
+}
+
+.projectType {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #4385ff;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.projectContent h3 {
+  margin-bottom: 15px;
+
+  color: white;
+
+  font-size: 26px;
+}
+
+.projectContent > p {
+  margin: 20px 0;
+
+  color: #aebed0;
+
+  line-height: 1.7;
+}
+
+/* ETIQUETAS */
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.projectTags span {
+  padding: 6px 10px;
+
+  border: 1px solid #1d4f7d;
+  border-radius: 20px;
+
+  background: #0b2946;
+
+  color: #8ab8ff;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ENLACES */
+
+.projectLinks {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 22px;
+
+  margin-top: 25px;
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.projectLink:hover {
+  color: #4385ff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .projects {
+    width: calc(100% - 30px);
+
+    padding: 70px 0;
+  }
+
+  .projectContent {
+    padding: 22px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 36px;
+  }
+}
+
+/* =========================
+   TECNOLOGÍAS
+========================= */
+
+.technologies {
+  width: calc(100% - 60px);
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 100px 0;
+
+  border-top: 1px solid #17304b;
+}
+
+.technologiesGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.technologyCard {
+  min-height: 220px;
+
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border: 1px solid #18395b;
+  border-radius: 14px;
+
+  background:
+    rgba(7, 25, 43, 0.8);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.technologyCard:hover {
+  transform: translateY(-6px);
+
+  border-color: #4385ff;
+
+  background:
+    rgba(10, 36, 62, 0.95);
+}
+
+.technologyIcon {
+  height: 70px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #4385ff;
+
+  font-size: 55px;
+}
+
+.technologyCard h3 {
+  margin-bottom: 10px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+.technologyCard p {
+  color: #9fb2c6;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .technologiesGrid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* TELÃ‰FONO */
+
+@media (max-width: 700px) {
+  .technologies {
+    width: calc(100% - 30px);
+
+    padding: 70px 0;
+  }
+
+  .technologiesGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .technologyCard {
+    min-height: 180px;
+
+    padding: 22px 12px;
+  }
+
+  .technologyIcon {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 420px) {
+  .technologiesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.heroTechnologies {
+  width: 100%;
+  margin-top: 45px;
+
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  gap: 30px;
+}
+
+.heroTechnologies div {
+  width: 75px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 10px;
+
+  text-align: center;
+}
+
+.heroTechnologies svg {
+  display: block;
+
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  color: #4385ff;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.heroTechnologies div:hover svg {
+  transform: translateY(-5px) scale(1.08);
+
+  color: #69a1ff;
+}
+
+.heroTechnologies span {
+  display: block;
+
+  color: #9fb2c6;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+/* MODO CLARO */
+
+.app.light .heroTechnologies span {
+  color: #64748b;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .heroTechnologies {
+    justify-content: center;
+  }
+}
+
+/* TELEFONO */
+
+@media (max-width: 600px) {
+  .heroTechnologies {
+    margin-top: 35px;
+
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+  .heroTechnologies div {
+    width: 70px;
+  }
+
+  .heroTechnologies svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .heroTechnologies span {
+    font-size: 10px;
+  }
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact {
+  width: calc(100% - 60px);
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 100px 0;
+
+  border-top: 1px solid #17304b;
+}
+
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+}
+
+/* =========================
+   INFORMACIÃ“N IZQUIERDA
+========================= */
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.contactItem {
+  padding: 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  border: 1px solid #18395b;
+  border-radius: 12px;
+
+  background: rgba(7, 25, 43, 0.8);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.contactItem:hover {
+  transform: translateX(5px);
+
+  border-color: #4385ff;
+}
+
+.contactItem > svg {
+  flex-shrink: 0;
+
+  color: #4385ff;
+
+  font-size: 28px;
+}
+
+.contactItem div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.contactItem span {
+  color: #8ea3b8;
+
+  font-size: 12px;
+}
+
+.contactItem strong {
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+/* =========================
+   FORMULARIO DERECHO
+========================= */
+
+.contactMessage {
+  padding: 35px;
+
+  border: 1px solid #18395b;
+  border-radius: 16px;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(67, 133, 255, 0.18),
+      transparent 40%
+    ),
+    #081a2c;
+}
+
+.contactFormTitle {
+  margin-bottom: 28px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.contactFormTitle > svg {
+  flex-shrink: 0;
+
+  color: #4385ff;
+
+  font-size: 32px;
+}
+
+.contactFormTitle h3 {
+  margin-bottom: 5px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+}
+
+.contactFormTitle p {
+  color: #8ea3b8;
+
+  font-size: 13px;
+}
+
+/* =========================
+   CAMPOS
+========================= */
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.formGroup label {
+  color: #d8e2ed;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid #23415f;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #071522;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.formGroup textarea {
+  resize: vertical;
+
+  min-height: 120px;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #60778e;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #4385ff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(67, 133, 255, 0.12);
+}
+
+/* =========================
+   BOTON
+========================= */
+
+.sendButton {
+  width: 100%;
+
+  padding: 14px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #1683ff;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.sendButton:hover {
+  transform: translateY(-2px);
+
+  background: #3595ff;
+}
+
+/* =========================
+   CONTACTO - MODO CLARO
+========================= */
+
+.app.light .contactItem {
+  border-color: #dbe3ed;
+
+  background: #ffffff;
+}
+
+.app.light .contactItem strong {
+  color: #172033;
+}
+
+.app.light .contactItem span {
+  color: #64748b;
+}
+
+.app.light .contactMessage {
+  border-color: #dbe3ed;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(67, 133, 255, 0.12),
+      transparent 40%
+    ),
+    #ffffff;
+}
+
+.app.light .formGroup input,
+.app.light .formGroup textarea {
+  border-color: #d5deea;
+
+  background: #f8fafc;
+
+  color: #172033;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  .contactContainer {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .contact {
+    width: calc(100% - 30px);
+
+    padding: 70px 0;
+  }
+
+  .contactMessage {
+    padding: 25px;
+  }
+
+}
+
+/* ========================================
+   ALINEAR COLUMNAS DE CONTACTO
+======================================== */
+
+.contactContainer {
+  align-items: stretch;
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.contactItem {
+  height: 100%;
+  min-height: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.contactMessage {
+  height: 100%;
+}
+/* =========================
+   ESTADO FORMULARIO
+========================= */
+
+.formStatus {
+  margin-top: 4px;
+  text-align: center;
+
+  color: #22c55e;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* BOTÃ“N MIENTRAS ENVÃA */
+
+.sendButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sendButton:disabled:hover {
+  transform: none;
+  background: #1683ff;
+}
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+  width: calc(100% - 60px);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 0 25px;
+  border-top: 1px solid #17304b;
+}
+
+/* PARTE SUPERIOR */
+
+.footerMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+/* NOMBRE Y PROFESIÃ“N */
+
+.footerBrand h3 {
+  margin: 0 0 7px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footerBrand p {
+  margin: 0;
+  color: #8ea3b8;
+  font-size: 13px;
+}
+
+/* GITHUB Y LINKEDIN */
+
+.footerSocial {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footerSocial a {
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid #18395b;
+  border-radius: 8px;
+
+  color: #9fb2c6;
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footerSocial a svg {
+  font-size: 18px;
+}
+
+.footerSocial a:hover {
+  transform: translateY(-2px);
+  border-color: #4385ff;
+  color: #4385ff;
+  background: rgba(67, 133, 255, 0.08);
+}
+
+/* PARTE INFERIOR */
+
+.footerBottom {
+  padding-top: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  border-top: 1px solid #17304b;
+}
+
+.footerBottom p {
+  margin: 0;
+  color: #647b91;
+  font-size: 12px;
+}
+
+/* ========================================
+   FOOTER - MODO CLARO
+======================================== */
+.app.light .footerBrand p {
+  color: #64748b;
+}
+
+.app.light .footerSocial a {
+  border-color: #dbe3ed;
+  color: #64748b;
+}
+
+.app.light .footerSocial a:hover {
+  border-color: #4385ff;
+  color: #4385ff;
+  background: rgba(67, 133, 255, 0.08);
+}
+
+
+
+.app.light .footerBottom p {
+  color: #64748b;
+}
+
+/* ========================================
+   FOOTER - RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+  .footer {
+    width: calc(100% - 30px);
+    padding: 35px 0 22px;
+  }
+
+  .footerMain {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+}
+/* =========================
+   COLORES ICONOS FOOTER
+========================= */
+
+/* GitHub - visible en modo oscuro */
+.footerSocial a[aria-label="GitHub"] svg {
+  color: #ffffff;
+}
+
+/* LinkedIn - azul oficial */
+.footerSocial a[aria-label="LinkedIn"] svg {
+  color: #0a66c2;
+}
+
+/* GitHub en modo claro */
+.app.light .footerSocial a[aria-label="GitHub"] svg {
+  color: #181717;
+}
+
+/* LinkedIn en modo claro */
+.app.light .footerSocial a[aria-label="LinkedIn"] svg {
+  color: #0a66c2;
+}
+/* ========================================
+   COLORES REALES - TECNOLOGÍAS HERO
+======================================== */
+
+/* JavaScript */
+.heroTechnologies div:nth-child(1) svg {
+  color: #f7df1e;
+}
+
+/* React */
+.heroTechnologies div:nth-child(2) svg {
+  color: #61dafb;
+}
+
+/* React Native */
+.heroTechnologies div:nth-child(3) svg {
+  color: #61dafb;
+}
+
+/* Expo */
+.heroTechnologies div:nth-child(4) svg {
+  color: #ffffff;
+}
+
+/* Node.js */
+.heroTechnologies div:nth-child(5) svg {
+  color: #339933;
+}
+
+/* PostgreSQL */
+.heroTechnologies div:nth-child(6) svg {
+  color: #4169e1;
+}
+
+/* Expo en modo claro */
+.app.light .heroTechnologies div:nth-child(4) svg {
+  color: #000020;
+}
+
+/* ========================================
+   COLORES REALES - STACK TECNOLÃ“GICO
+======================================== */
+
+.technologyIcon.javascript svg {
+  color: #f7df1e;
+}
+
+.technologyIcon.react svg,
+.technologyIcon.react-native svg {
+  color: #61dafb;
+}
+
+.technologyIcon.expo svg {
+  color: #ffffff;
+}
+
+.technologyIcon.nodejs svg {
+  color: #339933;
+}
+
+.technologyIcon.postgresql svg {
+  color: #4169e1;
+}
+
+.technologyIcon.html svg {
+  color: #e34f26;
+}
+
+.technologyIcon.css svg {
+  color: #1572b6;
+}
+
+.technologyIcon.git svg {
+  color: #f05032;
+}
+
+.technologyIcon.github svg {
+  color: #ffffff;
+}
+
+/* MODO CLARO */
+
+.app.light .technologyIcon.expo svg {
+  color: #000020;
+}
+
+.app.light .technologyIcon.github svg {
+  color: #181717;
+}
+
+/* ========================================
+   COLORES REALES - CONTACTO
+======================================== */
+
+/* Correo - mantiene el color del portafolio */
+.contactInfo .contactItem:nth-child(1) > svg {
+  color: #4385ff;
+}
+
+/* LinkedIn */
+.contactInfo .contactItem:nth-child(2) > svg {
+  color: #0a66c2;
+}
+
+/* GitHub */
+.contactInfo .contactItem:nth-child(3) > svg {
+  color: #ffffff;
+}
+
+/* GitHub en modo claro */
+.app.light .contactInfo .contactItem:nth-child(3) > svg {
+  color: #181717;
+}
+
+/* Icono enviar mensaje */
+.contactFormTitle > svg,
+.sendButton svg {
+  color: #ffffff;
+}
+
+/* Icono superior del formulario */
+.contactFormTitle > svg {
+  color: #4385ff;
+}
+
+/* Gmail */
+.contactInfo .contactItem:nth-child(1) > svg {
+  color: #ea4335;
+}
+/* =========================================================
+   MODO CLARO GENERAL
+   No modifica el diseño del modo oscuro
+========================================================= */
+
+.app.light {
+  background: #f8fafc;
+  color: #172033;
+}
+
+/* NAVBAR */
+
+.app.light .navbar {
+  background: rgba(248, 250, 252, 0.95);
+  border-bottom-color: #dbe3ed;
+}
+
+.app.light .logo {
+  color: #4385ff;
+}
+
+.app.light .navLinks a {
+  color: #475569;
+}
+
+.app.light .navLinks a:hover {
+  color: #4385ff;
+}
+
+.app.light .themeButton {
+  background: #ffffff;
+  border-color: #dbe3ed;
+  color: #172033;
+}
+
+.app.light .themeButton:hover {
+  background: #eef4ff;
+  border-color: #4385ff;
+}
+
+/* HERO */
+
+.app.light .heroHello {
+  color: #4385ff;
+}
+
+.app.light .hero h1 {
+  color: #172033;
+}
+
+.app.light .hero h2 {
+  color: #475569;
+}
+
+.app.light .heroDescription {
+  color: #64748b;
+}
+
+.app.light .secondaryButton {
+  background: #ffffff;
+  border-color: #dbe3ed;
+  color: #334155;
+}
+
+.app.light .secondaryButton:hover {
+  border-color: #4385ff;
+  color: #4385ff;
+}
+
+.app.light .imagePlaceholder {
+  background: #ffffff;
+  border-color: #dbe3ed;
+}
+
+.app.light .imagePlaceholder p {
+  color: #64748b;
+}
+
+/* ENCABEZADOS DE SECCIONES */
+
+.app.light .sectionHeader h2 {
+  color: #172033;
+}
+
+.app.light .sectionHeader > p:not(.sectionLabel) {
+  color: #64748b;
+}
+
+.app.light .sectionLabel {
+  color: #4385ff;
+}
+
+/* SOBRE MÍ */
+
+.app.light .about {
+  border-top-color: #dbe3ed;
+}
+
+.app.light .about h2,
+.app.light .about h3 {
+  color: #172033;
+}
+
+.app.light .about p {
+  color: #64748b;
+}
+
+/* PROYECTOS */
+
+.app.light .projects {
+  border-top-color: #dbe3ed;
+}
+
+.app.light .projectCard {
+  background: #ffffff;
+  border-color: #dbe3ed;
+}
+
+.app.light .projectCard:hover {
+  border-color: #4385ff;
+}
+
+.app.light .projectCard h3 {
+  color: #172033;
+}
+
+.app.light .projectCard p {
+  color: #64748b;
+}
+
+/* TECNOLOGÍAS */
+
+.app.light .technologies {
+  border-top-color: #dbe3ed;
+}
+
+.app.light .technologyCard {
+  background: #ffffff;
+  border-color: #dbe3ed;
+}
+
+.app.light .technologyCard:hover {
+  border-color: #4385ff;
+}
+
+.app.light .technologyCard h3 {
+  color: #172033;
+}
+
+.app.light .technologyCard p {
+  color: #64748b;
+}
+
+/* CONTACTO */
+
+.app.light .contact {
+  border-top-color: #dbe3ed;
+}
+
+.app.light .contactMessage {
+  background: #ffffff;
+  border-color: #dbe3ed;
+}
+
+.app.light .contactFormTitle h3 {
+  color: #172033;
+}
+
+.app.light .contactFormTitle p {
+  color: #64748b;
+}
+
+.app.light .formGroup label {
+  color: #334155;
+}
+
+.app.light .formGroup input,
+.app.light .formGroup textarea {
+  background: #f8fafc;
+  border-color: #d5deea;
+  color: #172033;
+}
+
+.app.light .formGroup input::placeholder,
+.app.light .formGroup textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* FOOTER */
+
+.app.light .footer {
+  border-top-color: #dbe3ed;
+}
+
+.app.light .footerBrand h3 {
+  color: #172033;
+}
+
+.app.light .footerBrand p,
+.app.light .footerBottom p {
+  color: #64748b;
+}
+
+.app.light .footerBottom {
+  border-top-color: #dbe3ed;
+}
+
+/* =========================================================
+   ABOUT - MODO CLARO
+   Solo afecta el modo claro
+========================================================= */
+
+/* Tarjetas pequeñas */
+
+.app.light .aboutCards article {
+  background: #ffffff;
+  border: 1px solid #dbe3ed;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* Título de cada tarjeta */
+
+.app.light .aboutCards article h3 {
+  color: #172033;
+}
+
+/* Descripción de cada tarjeta */
+
+.app.light .aboutCards article p {
+  color: #64748b;
+}
+
+/* Iconos */
+
+.app.light .aboutCards .aboutIcon {
+  color: #4385ff;
+}
+
+/* Segundo proyecto también horizontal */
+.projectsGrid > .projectCard:not(.featuredProject) {
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+
+/* Imagen */
+.projectsGrid > .projectCard:not(.featuredProject) .projectImage {
+  height: 100%;
+}
+
+/* Placeholder ocupa toda la altura */
+.projectsGrid > .projectCard:not(.featuredProject) .projectPlaceholder {
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .featuredProject,
+  .projectsGrid > .projectCard:not(.featuredProject) {
+    grid-template-columns: 1fr;
+  }
+}
+/* ========================================
+   PROYECTOS - IMAGEN EN MODO CLARO
+======================================== */
+
+.app.light .projectImage {
+  background: #ffffff;
+}
+
+.app.light .projectPlaceholder {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(67, 133, 255, 0.14),
+      transparent 60%
+    ),
+    #f8fafc;
+
+  color: #4385ff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  
+}
+
+@media (max-width: 500px) {
+}
+
+/* =========================================================
+   HERO - FOTO INTEGRADA DETRÁS DEL TEXTO COMO MOCKUP
+========================================================= */
+
+.hero {
+  position: relative;
+  display: block;
+  padding: 110px 0 120px;
+  overflow: hidden;
+}
+
+
+/* =========================
+   FOTO DEL NOTEBOOK
+========================= */
+
+.heroImage {
+  position: absolute;
+
+  z-index: 1;
+
+  top: 50%;
+  right: -20px;
+
+  transform: translateY(-50%);
+
+  width: 62%;
+  height: 78%;
+
+  overflow: hidden;
+
+  border: none;
+  border-radius: 0;
+
+  background: transparent;
+}
+
+.heroImage img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  border: none;
+
+  filter:
+    brightness(0.72)
+    contrast(1.08)
+    saturate(1.05);
+}
+
+/* =========================================================
+   DEGRADADO
+   Hace que la foto desaparezca debajo del texto
+========================================================= */
+
+.heroImage::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      #06182a 0%,
+      rgba(6, 24, 42, 0.96) 5%,
+      rgba(6, 24, 42, 0.75) 20%,
+      rgba(6, 24, 42, 0.30) 42%,
+      rgba(6, 24, 42, 0.05) 65%,
+      transparent 100%
+    );
+}
+
+/* =========================
+   TECNOLOGÍAS
+========================= */
+
+.heroTechnologies {
+  position: relative;
+  z-index: 4;
+}
+
+/* =========================
+   INDICADOR INFERIOR
+========================= */
+
+.heroScroll {
+  z-index: 5;
+}
+
+/* =========================================================
+   MODO CLARO
+========================================================= */
+
+.app.light .heroImage img {
+  filter:
+    brightness(0.93)
+    contrast(1.03)
+    saturate(1);
+}
+
+.app.light .heroImage::after {
+  background:
+    linear-gradient(
+      90deg,
+      #f8fafc 0%,
+      rgba(248, 250, 252, 0.96) 5%,
+      rgba(248, 250, 252, 0.75) 20%,
+      rgba(248, 250, 252, 0.30) 42%,
+      rgba(248, 250, 252, 0.05) 65%,
+      transparent 100%
+    );
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    padding-top: 80px;
+
+    text-align: center;
+  }
+
+  .heroContent {
+    width: 100%;
+    max-width: 750px;
+
+    margin: 0 auto;
+  }
+
+  .heroImage {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    transform: none;
+
+    width: 100%;
+    height: 380px;
+
+    margin: 50px auto 0;
+  }
+
+  .heroImage::after {
+    background:
+      linear-gradient(
+        180deg,
+        #06182a 0%,
+        rgba(6, 24, 42, 0.15) 30%,
+        rgba(6, 24, 42, 0.05) 100%
+      );
+  }
+
+  .app.light .heroImage::after {
+    background:
+      linear-gradient(
+        180deg,
+        #f8fafc 0%,
+        rgba(248, 250, 252, 0.15) 30%,
+        transparent 100%
+      );
+  }
+}
+
+/* =========================================================
+   TELEFONO
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    width: calc(100% - 30px);
+
+    padding:
+      60px 0
+      100px;
+  }
+
+  .heroContent {
+    width: 100%;
+  }
+
+  .heroImage {
+    height: 270px;
+
+    margin-top: 35px;
+  }
+}
+/* =========================================================
+   AJUSTE FINAL HERO - ESTILO MOCKUP
+========================================================= */
+
+.hero {
+  min-height: 720px;
+  padding-top: 90px;
+  padding-bottom: 80px;
+}
+
+/* CONTENIDO */
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+
+  width: 58%;
+  max-width: 720px;
+}
+
+/* FOTO */
+
+.heroImage {
+  position: absolute;
+
+  top: 80px;
+  right: 0;
+  bottom: 70px;
+
+  width: 62%;
+  height: auto;
+
+  transform: none;
+
+  overflow: hidden;
+
+  border: none;
+  border-radius: 0;
+
+  background: transparent;
+
+  /* integra la foto con el fondo */
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.35) 10%,
+      #000 28%,
+      #000 88%,
+      transparent 100%
+    );
+
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.35) 10%,
+      #000 28%,
+      #000 88%,
+      transparent 100%
+    );
+}
+
+/* La imagen conserva las propiedades definidas en el bloque anterior. */
+
+/* Ya usamos mask para integrar la foto */
+
+.heroImage::after {
+  display: none;
+}
+
+/* TECNOLOGÍAS */
+
+.heroTechnologies {
+  margin-top: 40px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    min-height: auto;
+  }
+
+  .heroContent {
+    width: 100%;
+  }
+
+  .heroImage {
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+
+    width: 100%;
+    height: 380px;
+
+    margin-top: 45px;
+
+    -webkit-mask-image: none;
+    mask-image: none;
+
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .heroImage {
+    height: 270px;
+  }
+}
+
+/* =========================================================
+   SOBRE MÍ - SIN IMAGEN
+========================================================= */
+
+.about.aboutNoImage {
+  display: block;
+
+  width: calc(100% - 60px);
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 100px 0;
+
+  border-top: 1px solid #17304b;
+}
+
+.aboutNoImage .aboutContent {
+  width: 100%;
+  max-width: none;
+}
+
+/* TÍTULO */
+
+.aboutNoImage .sectionLabel {
+  margin-bottom: 14px;
+}
+
+.aboutNoImage h2 {
+  margin: 0 0 35px;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 800;
+
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.aboutNoImage .aboutText {
+  max-width: 1000px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 40px;
+
+  margin-bottom: 55px;
+}
+
+.aboutNoImage .aboutText p {
+  margin: 0;
+
+  color: #aebed0;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.aboutNoImage .aboutCards {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-top: 0;
+}
+
+.aboutNoImage .aboutCards article {
+  min-height: 155px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding: 28px;
+
+  border: 1px solid #18395b;
+  border-radius: 14px;
+
+  background: rgba(7, 25, 43, 0.65);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.aboutNoImage .aboutCards article:hover {
+  transform: translateY(-5px);
+
+  border-color: #4385ff;
+
+  background: rgba(11, 41, 70, 0.8);
+}
+
+.aboutNoImage .aboutIcon {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: #4385ff;
+
+  font-size: 28px;
+}
+
+.aboutNoImage .aboutCards h3 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+.aboutNoImage .aboutCards p {
+  margin: 0;
+
+  color: #8fa5bd;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MODO CLARO
+========================================================= */
+
+.app.light .about.aboutNoImage {
+  border-top-color: #dbe3ed;
+}
+
+.app.light .aboutNoImage .aboutCards article:hover {
+  border-color: #4385ff;
+
+  background: #f8fbff;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .aboutNoImage .aboutText {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .aboutNoImage .aboutCards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MoVIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .about.aboutNoImage {
+    width: calc(100% - 30px);
+
+    padding: 70px 0;
+  }
+
+  .aboutNoImage h2 {
+    font-size: 38px;
+
+    margin-bottom: 30px;
+  }
+
+  .aboutNoImage .aboutText {
+    margin-bottom: 40px;
+  }
+
+  .aboutNoImage .aboutText p {
+    font-size: 15px;
+  }
+
+  .aboutNoImage .aboutCards article {
+    min-height: auto;
+
+    padding: 22px;
+  }
+}
+
+/* =========================================================
+   SOBRE MÍ - AJUSTE COMPACTO FINAL
+========================================================= */
+
+.about.aboutNoImage {
+  width: calc(100% - 60px);
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 90px 0 110px;
+
+  display: block;
+
+  border-top: 1px solid #17304b;
+}
+
+.aboutNoImage .aboutContent {
+  width: 100%;
+  max-width: 1050px;
+}
+
+/* TÍTULO */
+
+.aboutNoImage h2 {
+  margin: 0 0 35px;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 4vw, 58px);
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.aboutNoImage .aboutText {
+  display: block;
+
+  max-width: 900px;
+
+  margin-bottom: 45px;
+}
+
+.aboutNoImage .aboutText p {
+  margin: 0 0 18px;
+
+  color: #aebed0;
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.aboutNoImage .aboutText p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.aboutNoImage .aboutCards {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin: 0;
+}
+
+.aboutNoImage .aboutCards article {
+  min-height: 130px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 16px;
+
+  padding: 24px;
+
+  border: 1px solid #18395b;
+  border-radius: 12px;
+
+  background: rgba(7, 25, 43, 0.65);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.aboutNoImage .aboutCards article:hover {
+  transform: translateY(-4px);
+
+  border-color: #4385ff;
+}
+
+.aboutNoImage .aboutIcon {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: #4385ff;
+
+  font-size: 25px;
+}
+
+.aboutNoImage .aboutCards h3 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+.aboutNoImage .aboutCards p {
+  margin: 0;
+
+  color: #8fa5bd;
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* =========================
+   MODO CLARO
+========================= */
+
+.app.light .aboutNoImage h2 {
+  color: #172033;
+}
+
+.app.light .aboutNoImage .aboutText p {
+  color: #64748b;
+}
+
+.app.light .aboutNoImage .aboutCards article {
+  border-color: #dbe3ed;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.app.light .aboutNoImage .aboutCards h3 {
+  color: #172033;
+}
+
+.app.light .aboutNoImage .aboutCards p {
+  color: #64748b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+  .aboutNoImage .aboutContent {
+    max-width: 100%;
+  }
+
+  .aboutNoImage .aboutCards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .about.aboutNoImage {
+    width: calc(100% - 30px);
+
+    padding: 70px 0;
+  }
+
+  .aboutNoImage h2 {
+    font-size: 38px;
+  }
+
+  .aboutNoImage .aboutText p {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   CERTIFICACIONES
+========================================================= */
+
+.certifications {
+  width: calc(100% - 60px);
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 100px 0;
+
+  border-top: 1px solid #17304b;
+}
+
+.certificationsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.certificationCard {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 330px;
+  padding: 32px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+
+  border: 1px solid #18395b;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(67, 133, 255, 0.13),
+      transparent 38%
+    ),
+    rgba(7, 25, 43, 0.8);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.certificationCard:hover {
+  transform: translateY(-6px);
+  border-color: #4385ff;
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 0, 0, 0.18);
+}
+
+.certificationIcon {
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: rgba(67, 133, 255, 0.12);
+  color: #4385ff;
+
+  font-size: 28px;
+}
+
+.certificationContent {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.certificationIssuer {
+  margin-bottom: 10px;
+
+  color: #4385ff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.certificationContent h3 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.certificationInstitution {
+  margin: 0 0 6px;
+
+  color: #aebed0;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.certificationDate {
+  margin: 0 0 18px;
+
+  color: #8297ad;
+
+  font-size: 13px;
+}
+
+.certificationDescription {
+  margin: 0 0 25px;
+
+  color: #9fb2c6;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.certificationButton {
+  margin-top: auto;
+  padding: 11px 17px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border: 1px solid #4385ff;
+  border-radius: 9px;
+
+  background: rgba(67, 133, 255, 0.1);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.certificationButton:hover {
+  transform: translateY(-2px);
+  background: #4385ff;
+}
+
+.certificationButton svg {
+  font-size: 12px;
+}
+
+/* =========================================================
+   CERTIFICACIONES - MODO CLARO
+========================================================= */
+
+.app.light .certifications {
+  border-top-color: #dbe3ed;
+}
+
+.app.light .certificationCard {
+  border-color: #dbe3ed;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(67, 133, 255, 0.1),
+      transparent 38%
+    ),
+    #ffffff;
+
+  box-shadow:
+    0 10px 30px
+    rgba(15, 23, 42, 0.05);
+}
+
+.app.light .certificationCard:hover {
+  border-color: #4385ff;
+}
+
+.app.light .certificationContent h3 {
+  color: #172033;
+}
+
+.app.light .certificationInstitution {
+  color: #475569;
+}
+
+.app.light .certificationDate,
+.app.light .certificationDescription {
+  color: #64748b;
+}
+
+.app.light .certificationButton {
+  color: #2563eb;
+}
+
+.app.light .certificationButton:hover {
+  color: #ffffff;
+}
+
+/* =========================================================
+   CERTIFICACIONES - RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .certificationsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .certifications {
+    width: calc(100% - 30px);
+    padding: 70px 0;
+  }
+
+  .certificationCard {
+    min-height: auto;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificationCard {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .certificationContent h3 {
+    font-size: 21px;
+  }
+
+  .certificationButton {
+    width: 100%;
+  }
+}
+/* Logo Cisco - Certificaciones */
+
+.certificationIcon.cisco {
+  background: rgba(4, 159, 217, 0.12);
+  color: #049fd9;
+}
+
+.certificationIcon.cisco svg {
+  width: 38px;
+  height: 38px;
+}
