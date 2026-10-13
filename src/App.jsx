@@ -1,4 +1,3 @@
-// Portafolio profesional - Primera actualización automática
 import { useState } from "react";
 
 import Navbar from "./components/Navbar";
